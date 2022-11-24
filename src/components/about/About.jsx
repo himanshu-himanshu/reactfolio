@@ -1,32 +1,35 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 import dots from "../../assets/dots.png";
 import profile from "../../assets/pic.jpg";
+import Heading from "../common/Heading";
+import MobileHeading from "../common/MobileHeading";
+import Wrapper from "../common/Wrapper";
 
 const About = () => {
   return (
-    <div className="w-full h-screen bg-primary">
-      <div className="container max-w-6xl mx-auto flex flex-col lg:flex-row justify-center h-full w-full items-start lg:items-center space-y-12 lg:space-y-0">
-        <div className="hidden lg:flex justify-start w-1/3 text-gray-700">
-          <h1 className="text-8xl font-bold tracking-widest about-text">
-            About
-          </h1>
-        </div>
-        <div className=" flex justify-center w-full text-gray-700 lg:hidden">
-          <h1 className="text-6xl md:text-7xl font-bold tracking-wide border-b-4 border-sky-500 pb-4">
-            About
-          </h1>
-        </div>
-
+    <section id="about">
+      <Wrapper>
+        <Heading title="About" />
+        <MobileHeading title="About" />
         <div class="flex justify-between w-full items-center text-center flex-col space-y-12 px-6 text-gray-400">
           <div class="relative">
-            <img src={profile} alt="" class="h-40 md:h-44 rounded-full" />
+            <motion.img
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.5 }}
+              src={profile}
+              viewport={{ once: true }}
+              alt=""
+              class="h-40 md:h-44 rounded-full"
+            />
             <div class="absolute h-full w-full -top-1 -left-1">
               <img src={dots} alt="" class="h-20 opacity-20" />
             </div>
             <div class="absolute h-full w-full bg-black top-0 rounded-full opacity-20"></div>
           </div>
-          <h1 class="text-center text-lg md:text-xl max-w-xl lg:max-w-2xl">
+          <h1 class="text-left text-sm sm:text-lg md:text-xl max-w-xl lg:max-w-2xl font-light font-Raleway">
             Hi there, myself Himanshu. I am a
             <span class="text-sky-500 font-bold"> Web developer</span> ,
             front-end developer to precise. I have a Bachelor's in Computer
@@ -36,8 +39,8 @@ const About = () => {
             of mobile apps.
           </h1>
         </div>
-      </div>
-    </div>
+      </Wrapper>
+    </section>
   );
 };
 

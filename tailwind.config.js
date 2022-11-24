@@ -10,6 +10,11 @@ module.exports = {
       },
       colors: {
         primary: "#0a192f",
+        secondary: "#1e1e1e",
+        lightGreen: "#1e1e",
+      },
+      backgroundImage: {
+        hero: 'url("../src/assets/bg2.svg")',
       },
     },
   },

@@ -9,12 +9,16 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  @apply bg-secondary;
+}
+
 .nav-link {
-    @apply hover:text-pink-500 duration-200 font-normal tracking-widest
+    @apply hover:text-lightGreen duration-300 font-normal tracking-widest
 }
 
 .mobile-nav-link {
-    @apply  border-l-4 p-10 duration-200 font-extralight tracking-widest
+    @apply  duration-200 font-extralight tracking-widest h-full p-10 text-end  hover:w-full
 }
 
 .about-text {
@@ -24,18 +28,35 @@ html {
 .about-text:after {
   content: "";
   width: 50%;
-  @apply p-1 block border-b-4 border-sky-500;
+  @apply p-1 block border-b-4 border-lightGreen;
+}
+
+.sub-heading {
+  transform: rotate(90deg);
+}
+
+.sub-heading::after {
+  content: "";
+  display: block;
+  margin-top: -14px;
+  margin-left: 120px;
+  width: 110px;
+  height: 1px;
+  @apply bg-gray-400;
 }
 
 input,
 textarea {
-  @apply bg-gray-900 p-3 border-b border-transparent tracking-wider text-white active:outline-none focus:outline-none focus:border-b focus:border-sky-500 shadow-xl;
+  @apply bg-gray-800 p-3 border-b border-transparent tracking-wider text-white active:outline-none focus:outline-none focus:border-b focus:border-sky-500 shadow-xl;
 }
 
 input::placeholder, textarea::placeholder {
     @apply text-gray-500 tracking-wider
 }
 
+.clip {
+  clip-path: polygon(0 0, 100% 0%, 100% 99.5%, 0 99.5%);
+}
 
 .icon-scroll,
 .icon-scroll:before {

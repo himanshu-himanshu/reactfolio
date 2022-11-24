@@ -2,6 +2,7 @@ import React from "react";
 
 import rocket from "../../assets/rocket.svg";
 import coding from "../../assets/coding.svg";
+import Heading from "../common/Heading";
 
 function topFunction() {
   document.body.scrollTop = 0; // For Safari
@@ -10,19 +11,16 @@ function topFunction() {
 
 const Footer = () => {
   return (
-    <div class="w-full h-screen bg-[#1e1e1e]">
+    <div class="w-full h-screen bg-secondary">
       <div class="container max-w-6xl mx-auto flex flex-col lg:flex-row justify-center h-full w-full items-start lg:items-center space-y-12 lg:space-y-0">
-        <div class="hidden lg:flex justify-start w-1/3 text-gray-700">
-          <h1 class="text-8xl font-bold tracking-widest about-text">Footer</h1>
-        </div>
-
+        <Heading title="Footer" />
         <div class="flex flex-col justify-center max-w-xl mx-auto">
           <div class="w-full flex flex-col justify-center items-center p-4 space-y-8">
             <img src={coding} alt="" class="w-72 lg:w-96" />
-            <h1 class="font-Sacramento text-4xl text-gray-500 border-b border-gray-400 pb-4">
+            <h1 class="font-Sacramento text-xl md:text-2xl lg:text-4xl text-gray-500 border-b border-gray-400 pb-4">
               Maintained and designed by Himanshu.
             </h1>
-            <p class="text-lg text-gray-400 tracking-widest">
+            <p class="text-sm md:text-lg text-gray-400 tracking-wider font-Alegreya">
               &copy;Copyright & All rights reserved @ 2022
             </p>
             <a onClick={() => topFunction()} className="hover:cursor-pointer">
