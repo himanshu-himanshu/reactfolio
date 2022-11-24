@@ -1,13 +1,72 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Alegreya&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.nav-link {
+    @apply hover:text-pink-500 duration-200 font-normal tracking-widest
+}
+
+.mobile-nav-link {
+    @apply  border-l-4 p-10 duration-200 font-extralight tracking-widest
+}
+
+.about-text {
+  transform: rotate(-90deg);
+}
+
+.about-text:after {
+  content: "";
+  width: 50%;
+  @apply p-1 block border-b-4 border-sky-500;
+}
+
+input,
+textarea {
+  @apply bg-gray-900 p-3 border-b border-transparent tracking-wider text-white active:outline-none focus:outline-none focus:border-b focus:border-sky-500 shadow-xl;
+}
+
+input::placeholder, textarea::placeholder {
+    @apply text-gray-500 tracking-wider
+}
+
+
+.icon-scroll,
+.icon-scroll:before {
+  position: absolute;
+  left: 20%;
+}
+
+.icon-scroll {
+  width: 30px;
+  height: 50px;
+  box-shadow: inset 0 0 0 1px #fff;
+  border-radius: 25px;
+}
+
+.icon-scroll:before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: #fff;
+  top: 8px;
+  left: 12px;
+  border-radius: 4px;
+  animation: scroll infinite 1.5s;
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
 }
