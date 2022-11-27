@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 // import { motion, AnimatePresence } from "framer-motion";
 
@@ -15,6 +15,10 @@ import MobileMenu from "./components/navbar/MobileMenu";
 function App() {
   const [openMenu, setOpenMenu] = useState(false);
 
+  useEffect(() => {
+    window.history.scrollRestoration = "manual";
+  }, []);
+
   const handleOpenMenu = () => {
     setOpenMenu(true);
     //document.body.classList.add("fixed");
@@ -23,6 +27,10 @@ function App() {
   const handleCloseMenu = () => {
     setOpenMenu(false);
     //document.body.classList.remove("fixed");
+  };
+
+  window.onbeforeunload = function () {
+    window.scrollTo(0, 0);
   };
 
   return (

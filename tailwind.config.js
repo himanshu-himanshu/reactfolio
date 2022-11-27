@@ -14,7 +14,7 @@ module.exports = {
         lightGreen: "#1e1e",
       },
       backgroundImage: {
-        hero: 'url("../src/assets/bg2.svg")',
+        hero: 'url("../src/assets/pattern.svg")',
       },
     },
   },
