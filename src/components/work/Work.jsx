@@ -16,7 +16,7 @@ const Work = () => {
           <div class="w-full flex flex-col xl:flex-row-reverse items-center justify-between">
             <img
               src={weather}
-              className="h-60 lg:h-80 w-90 shadow-xl lg:hover:scale-125 duration-300 border-2"
+              className="h-60 md:h-80 w-90 shadow-xl lg:hover:scale-125 duration-300 border-2"
             />
             <div className="px-2 mr-4 py-4 max-w-xl text-center">
               <h1 class="text-2xl md:text-3xl lg:text-4xl text-gray-300 p-2 font-Alegreya mb-4">
