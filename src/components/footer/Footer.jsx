@@ -8,6 +8,12 @@ import Heading from "../common/Heading";
 const Footer = () => {
   return (
     <div class="w-full h-screen bg-secondary">
+      <div className="relative top-[150px] -left-10 hidden lg:inline-block">
+        <motion.div className="relative border border-gray-600 p-10">
+          <motion.div className="border border-gray-600 w-full h-full absolute -top-2 -left-2"></motion.div>
+          <motion.div className="border border-gray-600 w-full h-full absolute -top-4 -left-4"></motion.div>
+        </motion.div>
+      </div>
       <div class="container max-w-6xl mx-auto flex flex-col lg:flex-row justify-center h-full w-full items-start lg:items-center space-y-12 lg:space-y-0">
         <Heading title="Footer" />
         <div class="flex flex-col justify-center max-w-xl mx-auto">

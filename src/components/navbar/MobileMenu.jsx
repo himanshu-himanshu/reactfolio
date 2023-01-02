@@ -4,22 +4,6 @@ import { FaGithub, FaLinkedin, FaInstagramSquare } from "react-icons/fa";
 const MobileMenu = ({ handleCloseMenu }) => {
   return (
     <>
-      {/* <motion.div
-        initial={{ x: "100%" }}
-        animate={{ x: 0 }}
-        transition={{ duration: 0.2 }}
-        exit={{ x: "100%" }}
-        className="w-full h-screen fixed top-0 left-0 bg-green-500 hover:cursor-crosshair z-20 overflow-y-hidden"
-        onClick={() => handleCloseMenu()}
-      ></motion.div>
-      <motion.div
-        initial={{ x: "100%" }}
-        animate={{ x: 0 }}
-        transition={{ duration: 0.2, delay: 0.5 }}
-        exit={{ x: "100%" }}
-        className="w-full h-screen fixed top-0 left-0 bg-yellow-500 hover:cursor-crosshair z-20 overflow-y-hidden"
-        onClick={() => handleCloseMenu()}
-      ></motion.div> */}
       <motion.div
         initial={{ x: "100%" }}
         animate={{ x: 0 }}
