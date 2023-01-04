@@ -25,7 +25,7 @@ const Banner = () => {
           viewport={{ once: true }}
           className="text-gray-100 text-4xl md:text-6xl lg:text-7xl tracking-wider font-Alegreya"
         >
-          <span className="bg-[#1e1e1e]/30">Hi</span>
+          <span className="bg-gray-800">Hi</span>
           <span>manshu.</span>
         </motion.p>
 
